@@ -104,7 +104,7 @@ const Login = () => {
                                 <span className="px-2 text-neutral-600 bg-white"> Or continue with </span>
                             </div>
                         </div>
-                        {/* <div>
+                        <div>
                             <button onClick={handleGoogleLogin} type="submit" className="mb-5 w-full items-center block px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transhtmlForm border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                                 <div className="flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" className="w-6 h-6" viewBox="0 0 48 48">
@@ -122,13 +122,13 @@ const Login = () => {
                                     <span className="ml-4"> Log in with Google</span>
                                 </div>
                             </button>
-                            <button onClick={handleGithubLogin} type="submit" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transhtmlForm border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                            {/* <button onClick={handleGithubLogin} type="submit" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transhtmlForm border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                                 <div className="flex items-center justify-center">
                                     <FaGithub className='text-gray-600' />
                                     <span className="ml-4"> Log in with Github</span>
                                 </div>
-                            </button>
-                        </div> */}
+                            </button> */}
+                        </div>
                     </div>
                 </div>
             </div>
