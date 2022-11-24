@@ -122,12 +122,12 @@ const Login = () => {
                                     <span className="ml-4"> Log in with Google</span>
                                 </div>
                             </button>
-                            {/* <button onClick={handleGithubLogin} type="submit" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transhtmlForm border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                            <button onClick={handleGithubLogin} type="submit" className="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transhtmlForm border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                                 <div className="flex items-center justify-center">
                                     <FaGithub className='text-gray-600' />
                                     <span className="ml-4"> Log in with Github</span>
                                 </div>
-                            </button> */}
+                            </button>
                         </div>
                     </div>
                 </div>
