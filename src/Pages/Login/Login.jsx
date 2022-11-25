@@ -87,14 +87,14 @@ const Login = () => {
                                     <input id="remember-me" name="remember-me" type="checkbox" placeholder="Your password" className="w-4 h-4 text-blue-600 border-gray-200 rounded focus:ring-blue-500" />
                                     <label htmlFor="remember-me" className="block ml-2 text-sm text-neutral-600"> Remember me </label>
                                 </div>
-                                <div class="text-sm">
-                                    <Link to="/register" class="font-medium text-blue-600 hover:text-blue-500"> New To Mobile Store? </Link>
-                                </div>
                             </div>
 
                             <div>
                                 <button type="submit" className="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transhtmlForm bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Log In</button>
                             </div>
+                            <p className="px-6 text-sm text-center dark:text-gray-400">Don't have an account yet?
+                                <Link rel="noopener noreferrer" to="/register" className="font-medium text-blue-600 hover:text-blue-500"> Register.</Link>
+                            </p>
                         </Form>
                         <div className="relative my-4">
                             <div className="absolute inset-0 flex items-center">

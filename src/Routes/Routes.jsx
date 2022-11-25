@@ -3,6 +3,18 @@ import DashBoard from "../Layout/DashBoard";
 import Main from "../Layout/Main";
 import AboutUs from "../Pages/AboutUs";
 import Blog from "../Pages/Blog";
+import AllPhones from "../Pages/Brands/AllPhones";
+import Iphone from "../Pages/Brands/Iphone";
+import LG from "../Pages/Brands/LG";
+import MI from "../Pages/Brands/MI";
+import OnePlus from "../Pages/Brands/OnePlus";
+import PhoneDetails from "../Pages/Brands/PhoneDetails";
+import AddProduct from "../Pages/DashBoard/AddProduct";
+import AllBuyers from "../Pages/DashBoard/AllBuyers";
+import AllSellers from "../Pages/DashBoard/AllSellers";
+import MyProducts from "../Pages/DashBoard/MyProducts";
+import Payment from "../Pages/DashBoard/Payment";
+import WishList from "../Pages/DashBoard/WishList";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
@@ -23,6 +35,31 @@ const router = createBrowserRouter([
                 element: <Blog />
             },
             {
+                path: '/allPhones',
+                element: <AllPhones />
+            },
+            {
+                path: '/allPhones/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/allPhones/${params.id}`),
+                element: <PhoneDetails />
+            },
+            {
+                path: '/iphone',
+                element: <Iphone />
+            },
+            {
+                path: '/lg',
+                element: <LG />
+            },
+            {
+                path: '/mi',
+                element: <MI />
+            },
+            {
+                path: '/onePlus',
+                element: <OnePlus />
+            },
+            {
                 path: '/aboutUs',
                 element: <AboutUs />
             },
@@ -41,8 +78,29 @@ const router = createBrowserRouter([
         element: <DashBoard />,
         children: [
             {
-                path: '/dashboard/addProduct'
-            }
+                path: '/dashboard/addProduct',
+                element: <AddProduct />
+            },
+            {
+                path: '/dashboard/myProducts',
+                element: <MyProducts />
+            },
+            {
+                path: '/dashboard/allBuyers',
+                element: <AllBuyers />
+            },
+            {
+                path: '/dashboard/allSellers',
+                element: <AllSellers />
+            },
+            {
+                path: '/dashboard/payment',
+                element: <Payment />
+            },
+            {
+                path: '/dashboard/wishList',
+                element: <WishList />
+            },
         ]
     }
 ]);

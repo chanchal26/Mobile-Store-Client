@@ -27,7 +27,6 @@ const Register = () => {
             photoURL,
             role
         }
-        console.log(user);
 
         createUser(email, password)
             .then(result => {
@@ -36,7 +35,6 @@ const Register = () => {
                 updateName(name, photoURL)
                     .then(() => {
                         toast.success(
-                            'Good job!',
                             'You have successfully Registered!'
                         )
                         navigate(from, { replace: true })
@@ -46,6 +44,19 @@ const Register = () => {
                     })
             })
             .catch(error => console.log(error))
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+        console.log(user);
 
     }
 
@@ -102,8 +113,8 @@ const Register = () => {
 
                             <div>
                                 <select name='role' className="select select-bordered w-full max-w-2xl">
-                                    <option selected>Buyer</option>
-                                    <option>Seller</option>
+                                    <option value='Buyer' selected>Buyer</option>
+                                    <option value='Seller'>Seller</option>
                                 </select>
                             </div>
 
