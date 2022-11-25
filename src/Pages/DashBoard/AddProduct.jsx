@@ -113,7 +113,7 @@ const AddProduct = () => {
                                 <option value='OnePlus'>OnePlus</option>
                             </select>
                         </div>
-                        {/* <div>
+                        <div>
                             <label htmlFor="year" className="block text-sm font-medium text-neutral-600 mb-1"> Years of Use </label>
                             <div className="mt-1">
                                 <input id="year" name="number" type="number" autoComplete="year" required placeholder="Years of Use" className="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transhtmlForm border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" />
@@ -127,7 +127,7 @@ const AddProduct = () => {
                         </div>
                         <div className='w-1/4'>
                             <button type="submit" className="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transhtmlForm bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Add</button>
-                        </div> */}
+                        </div>
                     </Form>
                 </div>
             </div>
