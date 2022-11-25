@@ -16,7 +16,7 @@ const Catagory = () => {
                 </div>
 
                 <div class="mt-8 sm:mt-12">
-                    {/* <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                    <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         <Link to='/iphone'
                             class="bg-gray-400 hover:bg-gray-500 flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center"
                         >
@@ -45,7 +45,7 @@ const Catagory = () => {
 
                             <dd class="text-4xl font-extrabold text-indigo-600 md:text-5xl">OnePlus</dd>
                         </Link>
-                    </dl> */}
+                    </dl>
                 </div>
             </div>
         </section>
