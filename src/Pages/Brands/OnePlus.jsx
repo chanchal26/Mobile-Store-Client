@@ -46,10 +46,10 @@ const OnePlus = () => {
                                                         <time dateTime="2020-03-16"> Mar 16, 2020 </time>
                                                     </div>
                                                 </div>
-                                                {/* <div className='flex mt-4 space-x-2 justify-end'>
+                                                <div className='flex mt-4 space-x-2 justify-end'>
                                                     <button className='btn btn-primary'>Advertise</button>
                                                     <button className='btn btn-primary'>Details</button>
-                                                </div> */}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
