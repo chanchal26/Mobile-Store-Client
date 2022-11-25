@@ -15,7 +15,7 @@ const AllSellers = () => {
             <div className="flex flex-col text-center w-full my-6">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">All Sellers</h1>
             </div>
-            {/* <div className="container p-2 mx-auto sm:p-4 text-gray-100">
+            <div className="container p-2 mx-auto sm:p-4 text-gray-100">
                 <div className="overflow-x-auto">
                     <table className="min-w-full text-xs">
                         <colgroup>
@@ -58,7 +58,7 @@ const AllSellers = () => {
                         </tbody>
                     </table>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };
