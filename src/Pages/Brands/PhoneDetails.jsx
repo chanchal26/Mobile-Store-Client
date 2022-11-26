@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
+import BookingModal from './BookingModal';
 
 const PhoneDetails = () => {
     const data = useLoaderData();
-    console.log(data);
+
+
+
     return (
         <section>
             <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
@@ -28,9 +31,9 @@ const PhoneDetails = () => {
                                     <p className="text-base leading-relaxed text-gray-400">Market Price : {data.buyingPrice}</p>
                                     <p className="text-base leading-relaxed text-gray-400">Selling Price : {data.sellingPrice}</p>
                                     <p className="text-base leading-relaxed text-gray-400">Uses : {data.year} Year</p>
-                                    <Link href="#" className="btn btn-primary inline-flex items-center mt-6 font-semibold text-White md:mb-2 lg:mb-0 hover:text-neutral-600" title="read more">
-                                        Book Now
-                                    </Link>
+                                    <label htmlFor="booking-modal" className="btn btn-primary inline-flex items-center mt-6 font-semibold text-White md:mb-2 lg:mb-0 hover:text-neutral-600">Book Now</label>
+
+                                    <BookingModal data={data} />
                                 </dd>
                             </div>
                             <div>
@@ -39,7 +42,6 @@ const PhoneDetails = () => {
                                     <p className="text-base leading-relaxed text-gray-400">Email: {data.email}</p>
                                     <p className="text-base leading-relaxed text-gray-400">Phone: {data.phone}</p>
                                     <p className="text-base leading-relaxed text-gray-400">Location: {data.address}</p>
-
                                 </dd>
                             </div>
                         </dl>

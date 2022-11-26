@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import DatePicker from 'react-date-picker';
 import toast from 'react-hot-toast';
 import { Form } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/UserContext';
 
 const AddProduct = () => {
     const [value, onChange] = useState(new Date());
+    const { user } = useContext(AuthContext);
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -59,13 +61,13 @@ const AddProduct = () => {
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-neutral-600"> Full Name </label>
                             <div className="mt-1">
-                                <input id="name" name="name" type="text" autoComplete="name" required placeholder="Your Name" className="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transhtmlForm border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" />
+                                <input id="name" name="name" type="text" defaultValue={user?.displayName} disabled autoComplete="name" required placeholder="Your Name" className="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transhtmlForm border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" />
                             </div>
                         </div>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-neutral-600"> Email address </label>
                             <div className="mt-1">
-                                <input id="email" name="email" type="email" autoComplete="email" required placeholder="Your Email" className="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transhtmlForm border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" />
+                                <input id="email" name="email" type="email" defaultValue={user?.email} disabled autoComplete="email" required placeholder="Your Email" className="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transhtmlForm border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" />
                             </div>
                         </div>
                         <div>
@@ -120,7 +122,7 @@ const AddProduct = () => {
                             </div>
                         </div>
                         <div className="space-y-1">
-                            <label htmlFor="date" className="block text-sm font-medium text-neutral-600"> Select Date </label>
+                            <label htmlFor="date" className="block text-sm font-medium text-neutral-600"> Today's Date </label>
                             <div className="mt-1">
                                 <DatePicker onChange={onChange} value={value} disabled name='date' />
                             </div>

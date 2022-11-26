@@ -7,7 +7,7 @@ const Header = () => {
     const { user, logout } = useContext(AuthContext);
 
     return (
-        <div className=" px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-8 bg-gray-100">
+        <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen md:px-24 lg:px-8 bg-gray-100">
             <div className="relative flex items-center justify-between">
                 <Link
                     to="/"
@@ -20,7 +20,7 @@ const Header = () => {
                         Mobile Store
                     </span>
                 </Link>
-                <ul className="flex items-center  space-x-8 lg:flex">
+                <ul className="flex items-center hidden space-x-8 lg:flex">
                     <li>
                         <Link
                             to='/'
@@ -74,7 +74,7 @@ const Header = () => {
                         </Link>
                     </li>
                 </ul>
-                <ul className="flex items-center  space-x-8 lg:flex">
+                <ul className="flex items-center hidden space-x-8 lg:flex">
                     {
                         user?.uid ? <>
                             <li>

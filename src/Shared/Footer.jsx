@@ -10,7 +10,7 @@ const Footer = () => {
                         <img className='w-12' src="https://i.ibb.co/jDwsmbp/favicon.png" alt="" />
                         <span className="ml-3 text-xl">Mobile Store</span>
                     </Link>
-                    <p className="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
+                    <p className="mt-2 text-sm text-gray-500">A good phone should last you for at least several years, have a great camera, a nice screen, long battery life, and be fast enough to do all the work and social networking.</p>
                 </div>
                 <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
                     <div className="lg:w-1/4 md:w-1/2 w-full px-4">

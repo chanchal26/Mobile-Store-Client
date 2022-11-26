@@ -12,6 +12,7 @@ import PhoneDetails from "../Pages/Brands/PhoneDetails";
 import AddProduct from "../Pages/DashBoard/AddProduct";
 import AllBuyers from "../Pages/DashBoard/AllBuyers";
 import AllSellers from "../Pages/DashBoard/AllSellers";
+import DashboardBanner from "../Pages/DashBoard/DashboardBanner";
 import MyOrders from "../Pages/DashBoard/MyOrders";
 import MyProducts from "../Pages/DashBoard/MyProducts";
 import Payment from "../Pages/DashBoard/Payment";
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <DashBoard />,
         children: [
+            {
+                path: '/dashboard',
+                element: <DashboardBanner />
+            },
             {
                 path: '/dashboard/addProduct',
                 element: <AddProduct />

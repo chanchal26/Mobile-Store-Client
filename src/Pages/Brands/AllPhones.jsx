@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/UserContext';
 
 const AllPhones = () => {
 
     const [allPhone, setAllPhone] = useState([]);
+    const { user } = useContext(AuthContext)
+    console.log(user);
 
     useEffect(() => {
         fetch('http://localhost:5000/allPhones')
@@ -11,13 +14,24 @@ const AllPhones = () => {
             .then(data => setAllPhone(data))
     }, [])
 
-    // const handleDetails = id => {
-
-    // }
+    const handleAdvertise = phone => {
+        fetch('http://localhost:5000/advertise', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(phone)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+    }
 
     return (
         <div className=''>
             <h2>All Phones</h2>
+
 
             <section>
                 <div className="relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
@@ -53,7 +67,7 @@ const AllPhones = () => {
                                                     </div>
                                                 </div>
                                                 <div className='flex mt-4 space-x-2 justify-end'>
-                                                    <button className='btn btn-primary'>Advertise</button>
+                                                    <button onClick={() => handleAdvertise(phone)} className='btn btn-primary'>Advertise</button>
                                                     <button className='btn btn-primary'><Link to={`/allPhones/${phone._id}`}>Details</Link></button>
                                                 </div>
                                             </div>
