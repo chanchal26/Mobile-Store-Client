@@ -12,6 +12,7 @@ import PhoneDetails from "../Pages/Brands/PhoneDetails";
 import AddProduct from "../Pages/DashBoard/AddProduct";
 import AllBuyers from "../Pages/DashBoard/AllBuyers";
 import AllSellers from "../Pages/DashBoard/AllSellers";
+import MyOrders from "../Pages/DashBoard/MyOrders";
 import MyProducts from "../Pages/DashBoard/MyProducts";
 import Payment from "../Pages/DashBoard/Payment";
 import WishList from "../Pages/DashBoard/WishList";
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/wishList',
                 element: <WishList />
+            },
+            {
+                path: '/dashboard/myOrders',
+                element: <MyOrders />
             },
         ]
     }

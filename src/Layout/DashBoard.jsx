@@ -26,6 +26,11 @@ const DashBoard = () => {
                                     </Link>
                                 </li>
                                 <li className="py-2 rounded-sm hover:bg-gray-200 flex items-center justify-center">
+                                    <Link rel="noopener noreferrer" to="/dashboard/myOrders" className="flex items-center p-2 space-x-3 rounded-md">
+                                        <span>My Orders</span>
+                                    </Link>
+                                </li>
+                                <li className="py-2 rounded-sm hover:bg-gray-200 flex items-center justify-center">
                                     <Link rel="noopener noreferrer" to="/dashboard/allBuyers" className="flex items-center p-2 space-x-3 rounded-md">
                                         <span>All Buyers</span>
                                     </Link>

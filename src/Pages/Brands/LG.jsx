@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LG = () => {
 
@@ -48,7 +49,7 @@ const LG = () => {
                                                 </div>
                                                 <div className='flex mt-4 space-x-2 justify-end'>
                                                     <button className='btn btn-primary'>Advertise</button>
-                                                    <button className='btn btn-primary'>Details</button>
+                                                    <button className='btn btn-primary'><Link to={`/allPhones/${phone._id}`}>Details</Link></button>
                                                 </div>
                                             </div>
                                         </div>

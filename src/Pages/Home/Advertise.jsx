@@ -3,7 +3,11 @@ import React from 'react';
 const Advertise = () => {
     return (
         <div>
-            <h2>Advirtise</h2>
+            <div className="mx-auto max-w-3xl text-center">
+                <h2 className="text-3xl font-bold text-gray-600 sm:text-4xl">
+                    Advertise
+                </h2>
+            </div>
         </div>
     );
 };
