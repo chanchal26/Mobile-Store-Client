@@ -3,12 +3,11 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className="space-y-4 my-8">
-            {/* <details className="group border-l-4 border-indigo-500 bg-gray-50 p-6 w-1/2 mx-auto" open>
+            <details className="group border-l-4 border-indigo-500 bg-gray-50 p-6 w-1/2 mx-auto" open>
                 <summary className="flex cursor-pointer items-center justify-between">
                     <h2 className="text-lg font-medium text-gray-900">
                         What are the different ways to manage a state in a React application?
                     </h2>
-
                     <span
                         className="ml-1.5 flex-shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3"
                     >
@@ -31,7 +30,7 @@ const Blog = () => {
                     The Four Kinds of React State to Manage Local state. Global state. Server state. URL state.
                     React state management is a process for managing the data that React components need in order to render themselves. This data is typically stored in the component's state object. When the state object changes, the component will re-render itself. React state management is basically half of a React app.
                 </p>
-            </details> */}
+            </details>
 
             <details className="group border-l-4 border-indigo-500 bg-gray-50 p-6 w-1/2 mx-auto">
                 <summary className="flex cursor-pointer items-center justify-between">
