@@ -15,7 +15,7 @@ const Header = () => {
                     title="Mobile Store"
                     className="inline-flex items-center"
                 >
-                    <img className='w-14' src="" alt="" />
+                    <img className='w-14' src="https://i.ibb.co/jDwsmbp/favicon.png" alt="" />
                     <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         Mobile Store
                     </span>
