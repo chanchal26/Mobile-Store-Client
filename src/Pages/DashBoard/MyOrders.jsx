@@ -4,17 +4,17 @@ import { AuthContext } from '../../Contexts/UserContext';
 const MyOrders = () => {
     const [orders, setOrders] = useState([])
     const { user } = useContext(AuthContext);
-    const { email } = user;
+
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${email}`)
+        fetch(`http://localhost:5000/myOrder/${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
-    }, [email])
-    console.log(orders);
+    }, [user]);
+
     return (
         <div>
             <div className="flex flex-col text-center w-full my-6">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">All Sellers</h1>
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">My Orders</h1>
             </div>
             <div className="container p-2 mx-auto sm:p-4 text-gray-100">
                 <div className="overflow-x-auto">

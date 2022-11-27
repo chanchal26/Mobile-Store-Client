@@ -31,7 +31,7 @@ const PhoneDetails = () => {
                                     <p className="text-base leading-relaxed text-gray-400">Market Price : {data.buyingPrice}</p>
                                     <p className="text-base leading-relaxed text-gray-400">Selling Price : {data.sellingPrice}</p>
                                     <p className="text-base leading-relaxed text-gray-400">Uses : {data.year} Year</p>
-                                    <label htmlFor="booking-modal" className="btn btn-primary inline-flex items-center mt-6 font-semibold text-White md:mb-2 lg:mb-0 hover:text-neutral-600">Book Now</label>
+                                    <label htmlFor="my-modal-3" className="btn">Book Now</label>
 
                                     <BookingModal data={data} />
                                 </dd>

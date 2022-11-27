@@ -48,7 +48,6 @@ const MI = () => {
                                                     </div>
                                                 </div>
                                                 <div className='flex mt-4 space-x-2 justify-end'>
-                                                    <button className='btn btn-primary'>Advertise</button>
                                                     <button className='btn btn-primary'><Link to={`/allPhones/${phone._id}`}>Details</Link></button>
                                                 </div>
                                             </div>

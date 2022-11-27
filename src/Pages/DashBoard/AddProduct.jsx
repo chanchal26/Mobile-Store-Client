@@ -22,6 +22,8 @@ const AddProduct = () => {
         const address = form.address.value;
         const sellingPrice = form.sellingPrice.value;
         const buyingPrice = form.buyingPrice.value;
+        const sellerName = user.displayName;
+        const photoURL = user.photoURL;
         const product = {
             name,
             email,
@@ -34,6 +36,8 @@ const AddProduct = () => {
             address,
             sellingPrice,
             buyingPrice,
+            sellerName,
+            photoURL,
         };
         fetch('http://localhost:5000/allPhones', {
             method: 'POST',
@@ -116,9 +120,9 @@ const AddProduct = () => {
                             </select>
                         </div>
                         <div>
-                            <label htmlFor="year" className="block text-sm font-medium text-neutral-600 mb-1"> Years of Use </label>
+                            <label htmlFor="year" className="block text-sm font-medium text-neutral-600 mb-1"> Purchase Year </label>
                             <div className="mt-1">
-                                <input id="year" name="number" type="number" autoComplete="year" required placeholder="Years of Use" className="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transhtmlForm border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" />
+                                <input id="year" name="number" type="number" autoComplete="year" required placeholder="Purchase Year" className="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transhtmlForm border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" />
                             </div>
                         </div>
                         <div className="space-y-1">

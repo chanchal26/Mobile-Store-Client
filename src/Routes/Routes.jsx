@@ -12,6 +12,7 @@ import PhoneDetails from "../Pages/Brands/PhoneDetails";
 import AddProduct from "../Pages/DashBoard/AddProduct";
 import AllBuyers from "../Pages/DashBoard/AllBuyers";
 import AllSellers from "../Pages/DashBoard/AllSellers";
+import AllUsers from "../Pages/DashBoard/AllUsers";
 import DashboardBanner from "../Pages/DashBoard/DashboardBanner";
 import MyOrders from "../Pages/DashBoard/MyOrders";
 import MyProducts from "../Pages/DashBoard/MyProducts";
@@ -21,6 +22,9 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
 import ErrorPage from "../Shared/ErrorPage";
+import AdminRoutes from "./AdminRoutes";
+import PrivateRoutes from "./PrivateRoutes";
+import SellerRoutes from "./SellerRoutes";
 
 const router = createBrowserRouter([
     {
@@ -43,7 +47,7 @@ const router = createBrowserRouter([
             {
                 path: '/allPhones/:id',
                 loader: ({ params }) => fetch(`http://localhost:5000/allPhones/${params.id}`),
-                element: <PhoneDetails />
+                element: <PrivateRoutes><PhoneDetails /></PrivateRoutes>
             },
             {
                 path: '/iphone',
@@ -85,19 +89,23 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/addProduct',
-                element: <AddProduct />
+                element: <SellerRoutes><AddProduct /></SellerRoutes>
             },
             {
                 path: '/dashboard/myProducts',
-                element: <MyProducts />
+                element: <SellerRoutes><MyProducts /></SellerRoutes>
             },
             {
                 path: '/dashboard/allBuyers',
-                element: <AllBuyers />
+                element: <AdminRoutes><AllBuyers /></AdminRoutes>
+            },
+            {
+                path: '/dashboard/allUsers',
+                element: <AdminRoutes><AllUsers /></AdminRoutes>
             },
             {
                 path: '/dashboard/allSellers',
-                element: <AllSellers />
+                element: <AdminRoutes><AllSellers /></AdminRoutes>
             },
             {
                 path: '/dashboard/payment',

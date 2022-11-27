@@ -12,21 +12,9 @@ const AllPhones = () => {
         fetch('http://localhost:5000/allPhones')
             .then(res => res.json())
             .then(data => setAllPhone(data))
-    }, [])
+    }, []);
 
-    const handleAdvertise = phone => {
-        fetch('http://localhost:5000/advertise', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(phone)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            })
-    }
+
 
     return (
         <div className=''>
@@ -54,20 +42,19 @@ const AllPhones = () => {
                                             <div className="flex items-center justify-between mt-6">
                                                 <div className="flex-shrink-0">
                                                     <span>
-                                                        <span className="sr-only">Michael Andreuzza</span>
-                                                        <img className="w-10 h-10 rounded-full" src="https://d33wubrfki0l68.cloudfront.net/2f76102fd18a4e095eaed7a836a3f2183a982a4d/91dd4/images/avatar.jpg" alt="" />
+                                                        <span className="sr-only">{phone.sellerName}</span>
+                                                        <img className="w-10 h-10 rounded-full" src={phone.photoURL} alt="" />
                                                     </span>
                                                 </div>
                                                 <div className="ml-3">
                                                     <p className="text-sm font-medium text-neutral-600">
-                                                        <span> Michaerl Andreuzza</span>
+                                                        <span> {phone.sellerName}</span>
                                                     </p>
                                                     <div className="flex space-x-1 text-sm text-gray-500">
                                                         <time dateTime="2020-03-16"> Mar 16, 2020 </time>
                                                     </div>
                                                 </div>
                                                 <div className='flex mt-4 space-x-2 justify-end'>
-                                                    <button onClick={() => handleAdvertise(phone)} className='btn btn-primary'>Advertise</button>
                                                     <button className='btn btn-primary'><Link to={`/allPhones/${phone._id}`}>Details</Link></button>
                                                 </div>
                                             </div>
