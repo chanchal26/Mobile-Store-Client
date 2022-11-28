@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../Contexts/UserContext';
 import useAdmin from '../Hooks/useAdmin';
@@ -94,6 +95,9 @@ const DashBoard = () => {
                 </div>
             </div>
             <Footer />
+            <Helmet>
+                <title>DashBoard</title>
+            </Helmet>
         </div>
     );
 };

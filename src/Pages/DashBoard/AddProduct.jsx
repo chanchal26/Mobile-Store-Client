@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import DatePicker from 'react-date-picker';
+import { Helmet } from 'react-helmet';
 import toast from 'react-hot-toast';
 import { Form, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext';
@@ -138,6 +139,9 @@ const AddProduct = () => {
                     </Form>
                 </div>
             </div>
+            <Helmet>
+                <title>Add Product</title>
+            </Helmet>
         </section>
     );
 };

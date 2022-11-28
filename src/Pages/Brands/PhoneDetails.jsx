@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { useLoaderData } from 'react-router-dom';
 import BookingModal from './BookingModal';
 
@@ -48,6 +49,9 @@ const PhoneDetails = () => {
                     </div>
                 </div>
             </div>
+            <Helmet>
+                <title>Phone Details</title>
+            </Helmet>
         </section>
     );
 };

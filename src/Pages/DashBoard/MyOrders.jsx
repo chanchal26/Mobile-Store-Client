@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext';
 
@@ -80,6 +81,9 @@ const MyOrders = () => {
                     </table>
                 </div>
             </div>
+            <Helmet>
+                <title>My Orders</title>
+            </Helmet>
         </div>
     );
 };

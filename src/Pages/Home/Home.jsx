@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Advertise from './Advertise';
 import Banner from './Banner';
 import Category from './Category';
@@ -11,6 +12,9 @@ const Home = () => {
             <Advertise />
             <Category />
             <Testimonial />
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
         </div>
     );
 };

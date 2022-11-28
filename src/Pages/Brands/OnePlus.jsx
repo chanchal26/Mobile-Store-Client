@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 const OnePlus = () => {
@@ -60,6 +61,9 @@ const OnePlus = () => {
                     </div>
                 </div>
             </section>
+            <Helmet>
+                <title>OnePlus</title>
+            </Helmet>
         </div>
     );
 };

@@ -7,6 +7,21 @@ import toast from 'react-hot-toast';
 
 const Login = () => {
 
+    const SavedUser = user => {
+        fetch('https://mobile-store-server.vercel.app/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+        console.log(user);
+    }
+
 
     const [error, setError] = useState('')
     const navigate = useNavigate()
@@ -40,7 +55,7 @@ const Login = () => {
                 'Good job!',
                 'You have successfully Logged In!'
             )
-            console.log(result.user)
+            console.log(SavedUser(result.user))
             navigate(from, { replace: true })
         })
     }
@@ -51,7 +66,7 @@ const Login = () => {
                 'Good job!',
                 'You have successfully Logged In!'
             )
-            console.log(result.user)
+            console.log(SavedUser(result.user))
             navigate(from, { replace: true })
         })
     }

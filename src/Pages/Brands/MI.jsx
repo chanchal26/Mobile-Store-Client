@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 const MI = () => {
@@ -60,6 +61,9 @@ const MI = () => {
                     </div>
                 </div>
             </section>
+            <Helmet>
+                <title>MI</title>
+            </Helmet>
         </div>
     );
 };

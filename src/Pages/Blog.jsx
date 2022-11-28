@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Blog = () => {
     return (
@@ -119,6 +120,9 @@ const Blog = () => {
                     One of the main reasons for the popularity of React is that it works very efficiently with the DOM. Vue also uses the virtual DOM, but compared to React, Vue has better performance and stability.
                 </p>
             </details>
+            <Helmet>
+                <title>Blog</title>
+            </Helmet>
         </div>
 
     );

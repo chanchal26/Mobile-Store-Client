@@ -3,6 +3,7 @@ import { useLoaderData, useNavigation } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckOutForm from './CheckOutForm';
+import { Helmet } from 'react-helmet';
 
 
 const stripePromise = loadStripe('pk_test_51M5wiaIrVzbm0HMvaqozjgplhudouPO0dY32CvJa0XhGHtfCcpPnRHkaz0ad6SH8G6XMXpipMHdo2AlSzqQiSGHM000hLx1eTn');
@@ -30,6 +31,9 @@ const Payment = () => {
                     />
                 </Elements>
             </div>
+            <Helmet>
+                <title>Payment</title>
+            </Helmet>
         </div>
     );
 };

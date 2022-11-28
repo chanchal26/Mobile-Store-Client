@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext';
 
@@ -67,6 +68,9 @@ const AllPhones = () => {
                     </div>
                 </div>
             </section>
+            <Helmet>
+                <title>AllPhone</title>
+            </Helmet>
         </div>
     );
 };

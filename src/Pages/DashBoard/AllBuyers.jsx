@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const AllBuyers = () => {
 
@@ -59,6 +60,9 @@ const AllBuyers = () => {
                     </table>
                 </div>
             </div>
+            <Helmet>
+                <title>All Buyers</title>
+            </Helmet>
         </div>
     );
 };
