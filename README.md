@@ -1,70 +1,54 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/).
 
 ## Available Scripts
 
-In the project directory, you can run:
+HTML,CSS,JAVASCRIPT,REACT,Stripe,React-Router-Dom,Tailwind Css,Etc
 
-### `npm start`
+### `LIVE WEBSITE`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [MOBILE STORE](https://mobile-store-bc57c.web.app/) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### `About This Website`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## What Is a Mobile Store(Resale market)?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+=>You can sell and buy phone From Mobile Store.You can be seller or you can be Buyer.What you want?just visit-
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## What Are a Mobile Store Responsibilities?
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Under a state's bar admission, lawyers must uphold the law and protect the rights of their clients. In addition to actually knowing the law, particularly within their practice area, an attorney must communicate clearly with their clients, work competently to resolve their clients' needs, and be ethical in performing their duties.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## What Are the Requirements for Becoming a Mobile Store?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+People who hope to become lawyers must first complete special training and meet other professional requirements. Although each state has its own standards for licensing attorneys, most states require hopeful lawyers to obtain an undergraduate degree and then graduate from an accredited law school. Once the formal education is complete, they must also take and pass the state's bar examination (a rigid test of knowledge in all fields of law), submit to an investigation into their moral character and fitness to practice law, and be sworn in by their state's supreme court.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## May Mobile Store Who Is Licensed in One State Practice Law in Another State?
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+No. Lawyers must comply with a state's bar admission requirements to practice law in that state. However, some states allow out-of-state attorneys to practice law if they have a certain amount of legal experience and receive approval from the state's highest court. Sometimes attorneys may participate in specific cases in states where they lack a license to do so, referred to as a "pro hac vice" (or "for this one particular occasion") appearance.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+### How Much Do Mobile Store Cost?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+It depends. Attorneys typically charge by the hour, based on their level of experience and other factors, but sometimes they charge a flat fee for certain transactions. While a one- or two-hour visit might cost a few hundred dollars (sometimes the first consultation is free), an ongoing legal dispute or issue can cost thousands or tens of thousands of dollars. On the other hand, some personal injury attorneys don't collect a dime unless you win your case.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+###                                  Thank You For Visiting

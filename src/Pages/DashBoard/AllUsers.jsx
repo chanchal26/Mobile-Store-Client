@@ -8,13 +8,13 @@ const AllUsers = () => {
     const [refresh, setRefresh] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://mobile-store-server.vercel.app/users')
             .then(res => res.json())
             .then(data => setAllUser(data))
     }, [refresh]);
 
     const handleClick = id => {
-        fetch(`http://localhost:5000/deleteUsers/${id}`, {
+        fetch(`https://mobile-store-server.vercel.app/deleteUsers/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

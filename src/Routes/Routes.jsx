@@ -46,7 +46,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allPhones/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/allPhones/${params.id}`),
+                loader: ({ params }) => fetch(`https://mobile-store-server.vercel.app/allPhones/${params.id}`),
                 element: <PrivateRoutes><PhoneDetails /></PrivateRoutes>
             },
             {
@@ -109,7 +109,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/payment/:id',
-                loader: async ({ params }) => await fetch(`http://localhost:5000/myOrder/${params.id}`),
+                loader: async ({ params }) => await fetch(`https://mobile-store-server.vercel.app/myOrder/${params.id}`),
                 element: <Payment />
             },
             {

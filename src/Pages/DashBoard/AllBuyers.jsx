@@ -8,13 +8,13 @@ const AllBuyers = () => {
     const [refresh, setRefresh] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allBuyers')
+        fetch('https://mobile-store-server.vercel.app/allBuyers')
             .then(res => res.json())
             .then(data => setAllBuyer(data))
     }, [refresh]);
 
     const handleMakeAdmin = (id) => {
-        fetch(`http://localhost:5000/users/makeAdmin/${id}`, {
+        fetch(`https://mobile-store-server.vercel.app/users/makeAdmin/${id}`, {
             method: 'PUT'
         })
             .then(res => res.json())

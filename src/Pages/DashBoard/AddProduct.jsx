@@ -41,7 +41,7 @@ const AddProduct = () => {
             sellerName,
             photoURL,
         };
-        fetch('http://localhost:5000/allPhones', {
+        fetch('https://mobile-store-server.vercel.app/allPhones', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

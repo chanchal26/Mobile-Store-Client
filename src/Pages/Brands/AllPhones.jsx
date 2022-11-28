@@ -10,7 +10,7 @@ const AllPhones = () => {
     console.log(user);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allPhones')
+        fetch('https://mobile-store-server.vercel.app/allPhones')
             .then(res => res.json())
             .then(data => setAllPhone(data))
     }, []);

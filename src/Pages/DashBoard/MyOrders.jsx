@@ -11,7 +11,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/myOrder?email=${email}`)
+            fetch(`https://mobile-store-server.vercel.app/myOrder?email=${email}`)
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }

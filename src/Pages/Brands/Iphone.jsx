@@ -7,14 +7,13 @@ const Iphone = () => {
     const [allPhone, setAllPhone] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/iphone')
+        fetch('https://mobile-store-server.vercel.app/iphone')
             .then(res => res.json())
             .then(data => setAllPhone(data))
     }, [])
 
     return (
         <div>
-            <h2>Iphone</h2>
             <section>
                 <div className="relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
                     <div className="relative mx-auto max-w-7xl">

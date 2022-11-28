@@ -13,7 +13,7 @@ const Register = () => {
     const { createUser, updateName, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
 
     const SavedUser = user => {
-        fetch('http://localhost:5000/users', {
+        fetch('https://mobile-store-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
