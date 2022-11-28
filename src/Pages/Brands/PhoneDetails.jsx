@@ -32,7 +32,7 @@ const PhoneDetails = () => {
                                     <p className="text-base leading-relaxed text-gray-400">Market Price : {data.buyingPrice}</p>
                                     <p className="text-base leading-relaxed text-gray-400">Selling Price : {data.sellingPrice}</p>
                                     <p className="text-base leading-relaxed text-gray-400">Uses : {data.year} Year</p>
-                                    <label htmlFor="my-modal-3" className="btn">Book Now</label>
+                                    <label htmlFor="my-modal-3" className="btn bg-indigo-600 mt-4">Book Now</label>
 
                                     <BookingModal data={data} />
                                 </dd>

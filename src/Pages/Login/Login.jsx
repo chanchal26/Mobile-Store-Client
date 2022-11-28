@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 const Login = () => {
 
     const SavedUser = user => {
-        fetch('https://mobile-store-server.vercel.app/users', {
+        fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

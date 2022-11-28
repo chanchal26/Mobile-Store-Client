@@ -21,7 +21,7 @@ const BookingModal = ({ data }) => {
             phone: phone,
             location: location
         };
-        fetch('https://mobile-store-server.vercel.app/myOrder', {
+        fetch('http://localhost:5000/myOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -34,7 +34,7 @@ const BookingModal = ({ data }) => {
                 toast.success('Congrats ! Your Booking Successful.')
             })
 
-        fetch(`https://mobile-store-server.vercel.app/deletePhone/${data._id}`, {
+        fetch(`http://localhost:5000/deletePhone/${data._id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -75,7 +75,7 @@ const BookingModal = ({ data }) => {
                             </div>
                         </div>
                         <div className="modal-action">
-                            <button type='submit' className="btn">Okay</button>
+                            <button type='submit' className="btn bg-indigo-600">Okay</button>
                         </div>
                     </Form>
                 </div>

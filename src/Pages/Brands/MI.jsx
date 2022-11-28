@@ -7,7 +7,7 @@ const MI = () => {
     const [allPhone, setAllPhone] = useState([]);
 
     useEffect(() => {
-        fetch('https://mobile-store-server.vercel.app/mi')
+        fetch('http://localhost:5000/mi')
             .then(res => res.json())
             .then(data => setAllPhone(data))
     }, [])

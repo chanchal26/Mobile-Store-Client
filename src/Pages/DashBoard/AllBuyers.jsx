@@ -1,15 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import toast from 'react-hot-toast';
 
 const AllBuyers = () => {
 
-    const [allBuyer, setAllBuyer] = useState([])
+    const [allBuyer, setAllBuyer] = useState([]);
+    const [refresh, setRefresh] = useState(false);
 
     useEffect(() => {
-        fetch('https://mobile-store-server.vercel.app/allBuyers')
+        fetch('http://localhost:5000/allBuyers')
             .then(res => res.json())
             .then(data => setAllBuyer(data))
-    }, []);
+    }, [refresh]);
+
+    const handleMakeAdmin = (id) => {
+        fetch(`http://localhost:5000/users/makeAdmin/${id}`, {
+            method: 'PUT'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    toast.success('Make Admin Successful.')
+                    setRefresh(true)
+                }
+            })
+
+    }
 
     return (
         <div>
@@ -49,9 +65,17 @@ const AllBuyers = () => {
                                             <p>{buyer.email}</p>
                                         </td>
                                         <td className="p-3 ">
-                                            <span className="px-3 py-1 font-semibold rounded-md bg-indigo-500 text-gray-900">
-                                                <button className=' text-white'>Delete</button>
-                                            </span>
+                                            {
+                                                buyer?.adminRole ? <>
+                                                    <span className="px-3 py-1 font-semibold rounded-md bg-indigo-300 text-gray-900">
+                                                        <button disabled className=' text-white'>Admin</button>
+                                                    </span>
+                                                </> : <>
+                                                    <span className="px-3 py-1 font-semibold rounded-md bg-indigo-500 hover:bg-indigo-600 text-gray-900">
+                                                        <button onClick={() => handleMakeAdmin(buyer._id)} className=' text-white'>Make Admin</button>
+                                                    </span>
+                                                </>
+                                            }
                                         </td>
                                     </tr>
                                 )
