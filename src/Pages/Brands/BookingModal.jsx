@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { Form } from 'react-router-dom';
+import { Form, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext';
 
 const BookingModal = ({ data }) => {
     const { user } = useContext(AuthContext);
     const { displayName, email } = user;
     const { model, sellingPrice } = data;
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -20,8 +21,7 @@ const BookingModal = ({ data }) => {
             phone: phone,
             location: location
         };
-        console.log(product);
-        fetch('http://localhost:5000/myOrder', {
+        fetch('https://mobile-store-server.vercel.app/myOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,6 +33,18 @@ const BookingModal = ({ data }) => {
                 console.log(data);
                 toast.success('Congrats ! Your Booking Successful.')
             })
+
+        fetch(`https://mobile-store-server.vercel.app/deletePhone/${data._id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.deletedCount) {
+                    navigate('/')
+                }
+            });
+
 
     };
 

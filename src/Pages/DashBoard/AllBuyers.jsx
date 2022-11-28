@@ -5,7 +5,7 @@ const AllBuyers = () => {
     const [allBuyer, setAllBuyer] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/allBuyers')
+        fetch('https://mobile-store-server.vercel.app/allBuyers')
             .then(res => res.json())
             .then(data => setAllBuyer(data))
     }, []);

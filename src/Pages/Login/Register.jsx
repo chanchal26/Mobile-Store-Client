@@ -12,6 +12,20 @@ const Register = () => {
     const from = location.state?.from?.pathname || '/'
     const { createUser, updateName, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
 
+    const SavedUser = user => {
+        fetch('https://mobile-store-server.vercel.app/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+        console.log(user);
+    }
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -44,19 +58,9 @@ const Register = () => {
                     })
             })
             .catch(error => console.log(error))
+        SavedUser(user)
 
-        fetch('http://localhost:5000/users', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            })
-        console.log(user);
+
 
     }
 
@@ -67,7 +71,7 @@ const Register = () => {
                 'Good job!',
                 'You have successfully Logged In!'
             )
-            console.log(result.user)
+            console.log(SavedUser(result.user))
             navigate(from, { replace: true })
         })
     }
@@ -78,7 +82,7 @@ const Register = () => {
                 'Good job!',
                 'You have successfully Logged In!'
             )
-            console.log(result.user)
+            console.log(SavedUser(result.user))
             navigate(from, { replace: true })
         })
     }

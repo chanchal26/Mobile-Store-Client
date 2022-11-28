@@ -8,13 +8,13 @@ const MyProducts = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myProducts/${user?.email}`)
+        fetch(`https://mobile-store-server.vercel.app/myProducts/${user?.email}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [user]);
 
     const handleAdvertise = phone => {
-        fetch('http://localhost:5000/advertise', {
+        fetch('https://mobile-store-server.vercel.app/advertise', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

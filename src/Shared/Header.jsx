@@ -63,16 +63,18 @@ const Header = () => {
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <Link
-                            to='/dashboard'
-                            aria-label="DashBoard"
-                            title="DashBoard"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-500"
-                        >
-                            DashBoard
-                        </Link>
-                    </li>
+                    {
+                        user?.uid && <li>
+                            <Link
+                                to='/dashboard'
+                                aria-label="DashBoard"
+                                title="DashBoard"
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-500"
+                            >
+                                DashBoard
+                            </Link>
+                        </li>
+                    }
                 </ul>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
                     {
@@ -204,16 +206,18 @@ const Header = () => {
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
-                                            <Link
-                                                to='/dashboard'
-                                                aria-label="DashBoard"
-                                                title="DashBoard"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-500"
-                                            >
-                                                DashBoard
-                                            </Link>
-                                        </li>
+                                        {
+                                            user?.uid && <li>
+                                                <Link
+                                                    to='/dashboard'
+                                                    aria-label="DashBoard"
+                                                    title="DashBoard"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-500"
+                                                >
+                                                    DashBoard
+                                                </Link>
+                                            </li>
+                                        }
                                         {
                                             user?.uid ? <>
                                                 <ul className='flex items-center space-x-8'>

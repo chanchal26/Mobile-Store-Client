@@ -6,7 +6,7 @@ const OnePlus = () => {
     const [allPhone, setAllPhone] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/onePlus')
+        fetch('https://mobile-store-server.vercel.app/onePlus')
             .then(res => res.json())
             .then(data => setAllPhone(data))
     }, [])

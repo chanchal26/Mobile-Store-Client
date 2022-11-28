@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import DatePicker from 'react-date-picker';
 import toast from 'react-hot-toast';
-import { Form } from 'react-router-dom';
+import { Form, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext';
 
 const AddProduct = () => {
     const [value, onChange] = useState(new Date());
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -39,7 +40,7 @@ const AddProduct = () => {
             sellerName,
             photoURL,
         };
-        fetch('http://localhost:5000/allPhones', {
+        fetch('https://mobile-store-server.vercel.app/allPhones', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -49,9 +50,9 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                toast.success('You Successfully Added your Product')
+                toast.success('You Successfully Added your Product');
+                navigate('/dashboard/myProducts')
             })
-        console.log(product);
     }
 
     return (

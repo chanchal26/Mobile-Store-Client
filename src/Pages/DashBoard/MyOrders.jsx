@@ -1,14 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext';
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([])
     const { user } = useContext(AuthContext);
+    const email = user.email;
+    console.log(orders);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user?.email}`)
-            .then(res => res.json())
-            .then(data => setOrders(data))
+        if (user) {
+            fetch(`https://mobile-store-server.vercel.app/myOrder?email=${email}`)
+                .then(res => res.json())
+                .then(data => setOrders(data))
+        }
     }, [user]);
 
     return (
@@ -53,11 +58,21 @@ const MyOrders = () => {
                                         <td className="p-3">
                                             <p>{order.price}</p>
                                         </td>
-                                        <td className="p-3 ">
-                                            <span className="px-3 py-1 font-semibold rounded-md bg-indigo-500 text-gray-900">
-                                                <button className=' text-white'>Pay</button>
-                                            </span>
-                                        </td>
+                                        {
+
+                                            order?.price && !order?.paid ? <>
+                                                <td className="p-3 ">
+                                                    <span>
+                                                        <Link to={`/dashboard/payment/${order?._id}`}><button className='px-3 py-1 font-semibold rounded-md text-white btn btn-sm bg-indigo-500'>Pay</button></Link>
+                                                    </span>
+                                                </td>
+                                            </> : <>
+                                                <td className="p-3 ">
+                                                    <span className="px-3 py-1 font-semibold rounded-md bg-indigo-500 text-gray-900">
+                                                        <button className=' text-white disabled'>Paid</button>
+                                                    </span>
+                                                </td></>
+                                        }
                                     </tr>
                                 )
                             }
