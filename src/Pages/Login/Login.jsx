@@ -40,7 +40,6 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 toast.success(
-                    'Good job!',
                     'You have successfully Logged In!'
                 )
                 console.log(result.user)
@@ -52,7 +51,6 @@ const Login = () => {
     const handleGoogleLogin = () => {
         signInWithGoogle().then(result => {
             toast.success(
-                'Good job!',
                 'You have successfully Logged In!'
             )
             console.log(SavedUser(result.user))
@@ -63,7 +61,6 @@ const Login = () => {
     const handleGithubLogin = () => {
         signInWithGithub().then(result => {
             toast.success(
-                'Good job!',
                 'You have successfully Logged In!'
             )
             console.log(SavedUser(result.user))
